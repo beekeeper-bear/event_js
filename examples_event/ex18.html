@@ -57,7 +57,7 @@
 
       sortTable(th.cellIndex, th.dataset.type); // th.cellIndex узнаем номер колонки в th
 
-      console.log(th.cellIndex+","+ th.dataset.type);
+      //console.log(th.cellIndex+","+ th.dataset.type);
 
     }
 
@@ -67,7 +67,7 @@
       let rowsArray = Array.from(tbody.rows); // создаем масcив из строк
       let compare;
 
-      console.log(rowsArray);
+     
 
       switch(type){
       case 'number':
@@ -84,7 +84,7 @@
     }
 
     rowsArray.sort(compare);
-    console.log(rowsArray);
+   
     tbody.append(...rowsArray);
       
     }
