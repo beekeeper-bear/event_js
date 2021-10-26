@@ -11,6 +11,24 @@
 <body>
   <div>Двойной клик выделит текст</в>
     <script>
+
+      document.querySelector('div').ondblclick = function(e)
+      
+      {
+        console.log('двойной клик');
+      }
+
+      document.querySelector('div').onmousedown = function(e) // предотвращение выдиления
+      
+      {
+        e.preventDefault();
+      }
+
+
+
+
+
+      
       
     </script>
 </body>

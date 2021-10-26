@@ -9,14 +9,40 @@
 </head>
 
 <body>
-  <a class="menu_link" href="/index.html" onclick="return false">На главную</a>
-  <a class="menu_link" href="/index.html" onclick="event.preventDefault()">На главную</a>
+  <a class="menu_link" href="/index.html" onclick="return false">return false</a>
+  <a class="menu_link" href="/index.html" onclick="event.preventDefault()">event.preventDefault()</a>
   <a class="menu_link" href="/index.html" id="link">На главную</a>
 
   <p>Lorem ipsum dolor sit amet.</p>
   <button class="menu_link" id="elem">Кнопка</button>
 
   <script>
+
+    link.onclick = function(e) {
+
+    return false; 
+
+    }
+
+    elem.oncontextmenu = function(e) {
+
+      e.preventDefault(); // не отображается контекстное меню
+      alert("Контекстное меню кнопки");
+    }
+
+    
+    document.oncontextmenu = function(e) {
+
+      if(e.defaultPrevented) return;
+
+
+e.preventDefault(); // не отображается контекстное меню
+alert("Контекстное меню Документа");
+}
+
+
+
+
     
   </script>
 </body>
